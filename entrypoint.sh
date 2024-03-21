@@ -5,8 +5,8 @@ set -e
 # set the postgres database host, port, user and password according to the environment
 # and pass them as arguments to the odoo process if not present in the config file
 : ${HOST:=${DB_PORT_5432_TCP_ADDR:='db'}}
-: ${PORT:=${DB_PORT_5432_TCP_PORT:=5432}}
-: ${USER:=${DB_ENV_POSTGRES_USER:=${POSTGRES_USER:='odoo'}}}
+: ${PORT:=${DB_PORT_5432_TCP_PORT:=${POSTGRES_PORT:='odoo'}}}
+: ${USER:=${DB_ENV_POSTGRES_USER:=${POSTGRES_USER:=5432}}}
 : ${PASSWORD:=${DB_ENV_POSTGRES_PASSWORD:=${POSTGRES_PASSWORD:='odoo17@2023'}}}
 
 # install python packages

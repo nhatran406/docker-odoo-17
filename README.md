@@ -5,12 +5,12 @@
 Install [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/) yourself, then run the following to set up first Odoo instance @ `localhost:10017` (default master password: `acb@123`):
 
 ``` bash
-curl -s https://raw.githubusercontent.com/nhatran406/docker-odoo-17/master/run.sh | sudo bash -s odoo-one 10017 20017
+curl -s https://raw.githubusercontent.com/nhatran406/docker-odoo-17/main/run.sh | sudo bash -s odoo-one 10017 20017
 ```
 and/or run the following to set up another Odoo instance @ `localhost:11017` (default master password: `acb@123`):
 
 ``` bash
-curl -s https://raw.githubusercontent.com/nhatran406/docker-odoo-17/master/run.sh | sudo bash -s odoo-two 11017 21017
+curl -s https://raw.githubusercontent.com/nhatran406/docker-odoo-17/main/run.sh | sudo bash -s odoo-two 11017 21017
 ```
 
 Some arguments:
@@ -74,6 +74,8 @@ $ sudo sysctl -p    # apply new config immediately
 ## Custom addons
 
 The **addons/** folder contains custom addons. Just put your custom addons if you have any.
+
+update addons_path = /mnt/extra-addons,/mnt/enterprise-addons and docker-compose file ( - ./enterprise/addons:/mnt/enterprise-addons)
 
 ## Odoo configuration & log
 
